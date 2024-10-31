@@ -6,7 +6,7 @@
 // add multiple serviceaccounts as {}, {}, {}, random account will be selected by each time app is opened.
 
 const environment = 'production'; // This Variable Decides the environment of the app. 'production' or 'development' or 'local'
- 
+
 const serviceaccounts = [];
 const randomserviceaccount = serviceaccounts[Math.floor(Math.random() * serviceaccounts.length)]; // DO NOT TOUCH THIS
 const domains_for_dl = [''] // add multiple cloudflare addresses to balance the load on download/stream servers, eg. ['https://testing.fetchgoogleapi.workers.dev', 'https://testing2.fetchgoogleapi2.workers.dev']
@@ -66,10 +66,10 @@ const uiConfig = {
   "logo_image": true, // true if you're using image link in next option.
   "logo_height": "", // only if logo_image is true
   "logo_width": "100px", // only if logo_image is true
-  "favicon": "https://cdn.jsdelivr.net/npm/@googledrive/index@2.2.3/images/favicon.ico",
+  "favicon": "https://cdn.jsdelivr.net/npm/@googledrive/index/images/favicon.ico",
   // if logo is true then link otherwise just text for name
-  "logo_link_name": "https://cdn.jsdelivr.net/npm/@googledrive/index@2.2.3/images/bhadoo-cloud-logo-white.svg",
-  "login_image": "https://i.imgur.com/5fHELJr.png", // Login page logo image
+  "logo_link_name": "https://cdn.jsdelivr.net/npm/@googledrive/index/images/bhadoo-cloud-logo-white.svg",
+  "login_image": "https://img.freepik.com/premium-photo/cute-chibi-anime-girl-saying-hi_854727-1923.jpg", // Login page logo image
   "fixed_header": true, // If you want the footer to be flexible or fixed.
   "header_padding": "80", // Value 80 for fixed header, Value 20 for flexible header. Required to be changed accordingly in some themes.
   "nav_link_1": "Home", // change navigation link name
@@ -87,10 +87,10 @@ const uiConfig = {
   "path_nav_alert_class": "alert alert-primary", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
   "file_view_alert_class": "alert alert-danger", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
   "file_count_alert_class": "alert alert-secondary", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
-  "contact_link": "https://telegram.dog/Telegram", // Link to Contact Button on Menu
+  "contact_link": "https://fb.com/dinhlong0510", // Link to Contact Button on Menu
   "copyright_year": "2050", // year of copyright, can be anything like 2015 - 2020 or just 2020
   "company_name": "The Bay Index", // Name next to copyright
-  "company_link": "https://telegram.dog/Telegram", // link of copyright name
+  "company_link": "https://fb.com/dinhlong0510", // link of copyright name
   "credit": true, // Set this to true to give us credit
   "display_size": true, // Set this to false to hide display file size
   "display_time": false, // Set this to false to hide display modified time for folder and files
@@ -99,13 +99,13 @@ const uiConfig = {
   "disable_video_download": false, // Remove Download, Copy Button on Videos
   "allow_selecting_files": true, // Disable Selecting Files to Download in Bulk
   "second_domain_for_dl": false, // If you want to display other URL for Downloading to protect your main domain.
-  "poster": "https://cdn.jsdelivr.net/npm/@googledrive/index@2.2.3/images/poster.jpg", // Video poster URL or see Readme to how to load from Drive
-  "audioposter": "https://cdn.jsdelivr.net/npm/@googledrive/index@2.2.3/images/music.jpg", // Video poster URL or see Readme to how to load from Drive
+  "poster": "https://wallpapercave.com/wp/wp12771211.jpg", // Video poster URL or see Readme to how to load from Drive
+  "audioposter": "http://m.gettywallpapers.com/wp-content/uploads/2023/11/Anime-Girl-Listening-to-Music-4k-Wallpaper-For-Computer-scaled.jpg", // Video poster URL or see Readme to how to load from Drive
   "jsdelivr_cdn_src": "https://cdn.jsdelivr.net/npm/@googledrive/index", // If Project is Forked, then enter your GitHub repo
   "render_head_md": true, // Render Head.md
   "render_readme_md": true, // Render Readme.md
-  "unauthorized_owner_link": "https://telegram.dog/Telegram", // Unauthorized Error Page Link to Owner
-  "unauthorized_owner_email": "abuse@telegram.org", // Unauthorized Error Page Owner Email
+  "unauthorized_owner_link": "https://fb.com/dinhlong0510", // Unauthorized Error Page Link to Owner
+  "unauthorized_owner_email": "yansuogaming@gmail.com", // Unauthorized Error Page Owner Email
   "downloaddomain": domain_for_dl, // Ignore this and set domains at top of this page after service accounts.
   "show_logout_button": authConfig.enable_login ? true : false, // set to true if you want to add logout button
 };
@@ -147,17 +147,17 @@ function html(current_drive_order = 0, model = {}) {
   window.UI = JSON.parse('${JSON.stringify(uiConfig)}');
   window.player_config = JSON.parse('${JSON.stringify(player_config)}');
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.0.0/dist/${uiConfig.theme}/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch/dist/${uiConfig.theme}/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <style>a{color:${uiConfig.css_a_tag_color};}p{color:${uiConfig.css_p_tag_color};}</style>
   <script src="${app_js_file}"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/build/pdf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked@5.1.1/lib/marked.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist/build/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.min.js"></script>
 </head>
 <body>
 </body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </html>`;
 };
 
@@ -173,8 +173,8 @@ const homepage = `<!DOCTYPE html>
       window.drive_names = JSON.parse('${JSON.stringify(authConfig.roots.map(it => it.name))}');
       window.UI = JSON.parse('${JSON.stringify(uiConfig)}');
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.0.0/dist/${uiConfig.theme}/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch/dist/${uiConfig.theme}/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <style>a{color:${uiConfig.css_a_tag_color};}p{color:${uiConfig.css_p_tag_color};}</style>
    </head>
    <body>
@@ -245,7 +245,7 @@ const homepage = `<!DOCTYPE html>
     </div>
    </body>
   <script src="${uiConfig.jsdelivr_cdn_src}@${uiConfig.version}/assets/homepage.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@/dist/js/bootstrap.bundle.min.js"></script>
 </html>`
 
 const login_html = `<html>
@@ -257,10 +257,16 @@ const login_html = `<html>
     <meta name="googlebot" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="${uiConfig.favicon}">
-    <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <style id="compiled-css" type="text/css">.login,.image{min-height:100vh}.bg-image{background-image:url('https://cdn.jsdelivr.net/gh/logingateway/images@1.0/background.jpg');background-size:cover;background-position:center center}#error-message{display:none}</style>
+<!--    <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.slim.min.js"></script>-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.slim.min.js"></script>
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/js/all.min.js"></script>
+
+    <style id="compiled-css" type="text/css">.login,.image{min-height:100vh}.bg-image{background-image:url('https://wallpapers-clan.com/wp-content/uploads/2023/12/anime-girl-pink-eyes-city-desktop-wallpaper-preview.jpg');background-size:cover;background-position:center center}#error-message{display:none}</style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -270,14 +276,14 @@ const login_html = `<html>
      color: #007bff;
      }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script>
      $(document).ready(function(){
       $("#btn-login").click(function() {
         const formData = new URLSearchParams();
         formData.append('username', $("#email").val());
         formData.append('password', $("#password").val());
-        
+
         fetch('/login', {
           method: 'POST',
           headers: {
@@ -294,17 +300,17 @@ const login_html = `<html>
             window.location.reload();
           }
           });
-      });	
+      });
       const queryparams = new URLSearchParams(window.location.search);
       if (queryparams.get('error')) {
          document.getElementById("error-message").style.display = "block";
          document.getElementById("error-message").innerHTML = queryparams.get('error');
-      }		  
+      }
      });
     </script>
    </head>
    <body>
-    <div class="container-fluid">
+    <div class="container">
      <div class="row no-gutter">
       <div class="col-md-6 d-none d-md-flex bg-image"></div>
       <div class="col-md-6 bg-light">
@@ -353,9 +359,13 @@ const signup_html = `<html>
     <meta name="googlebot" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="${uiConfig.favicon}">
-    <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.slim.min.js"></script>
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+
+<!--		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
     <style id="compiled-css" type="text/css">.login,.image{min-height:100vh}.bg-image{background-image:url('https://cdn.jsdelivr.net/gh/logingateway/images@1.0/background.jpg');background-size:cover;background-position:center center}#error-message{display:none}</style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -366,14 +376,14 @@ const signup_html = `<html>
      color: #007bff;
      }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script>
      $(document).ready(function(){
       $("#btn-login").click(function() {
         const formData = new URLSearchParams();
         formData.append('username', $("#email").val());
         formData.append('password', $("#password").val());
-        
+
         fetch('/signup_api', {
           method: 'POST',
           headers: {
@@ -391,12 +401,12 @@ const signup_html = `<html>
             document.getElementById("error-message").innerHTML = "Account Created, Please Login";
           }
           });
-      });	
+      });
       const queryparams = new URLSearchParams(window.location.search);
       if (queryparams.get('error')) {
          document.getElementById("error-message").style.display = "block";
          document.getElementById("error-message").innerHTML = queryparams.get('error');
-      }		  
+      }
      });
     </script>
    </head>
@@ -708,7 +718,6 @@ function login() {
   });
 }
 
-
 // start handlerequest
 async function handleRequest(request, event) {
   const region = request.headers.get('cf-ipcountry');
@@ -758,7 +767,7 @@ async function handleRequest(request, event) {
         });
       }
 
-      // Use the authorization code to obtain access token and ID token		
+      // Use the authorization code to obtain access token and ID token
       const response = await fetch('https://oauth2.googleapis.com/token', {
         method: 'POST',
         headers: {
