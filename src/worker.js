@@ -50,10 +50,16 @@ const authConfig = {
   ],
   "roots": [
     {
-      "id": "",
-      "name": "00-MUST-HAVE",
+      "id": "1d6fcE0zsLOoCx64BEk8uLAgOFZDgeCvX",
+      "name": "Data Game",
       "protect_file_link": false
   },
+		{
+			"id": "1DTQfu_MdvoelhKFYh0MKgactFMV_IQp6",
+			"name": "Data Phim",
+			"protect_file_link": false,
+			// "auth": {"username":"password", "username1":"password1"} /* Remove double slash before "auth" to activate id password protection */
+		},
   ]
 };
 const crypto_base_key = "3225f86e99e205347b4310e437253bfd" // Example 256 bit key used, generate your own.
@@ -181,7 +187,7 @@ const homepage = `<!DOCTYPE html>
     <header>
      <div id="nav">
       <nav class="navbar navbar-expand-lg${uiConfig.fixed_header ?' fixed-top': ''} ${uiConfig.header_style_class}">
-         <div class="container-fluid">
+         <div class="container">
          <a class="navbar-brand" href="/">${uiConfig.logo_image ? '<img border="0" alt="'+uiConfig.company_name+'" src="'+uiConfig.logo_link_name+'" height="'+uiConfig.height+'" width="'+uiConfig.logo_width+'">' : uiConfig.logo_link_name}</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -411,7 +417,7 @@ const signup_html = `<html>
     </script>
    </head>
    <body>
-    <div class="container-fluid">
+    <div class="container">
      <div class="row no-gutter">
       <div class="col-md-6 d-none d-md-flex bg-image"></div>
       <div class="col-md-6 bg-light">
