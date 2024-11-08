@@ -5,7 +5,33 @@ function init() {
     document.siteName = $('title').html();
     var html = `<header>
    <div id="nav">
-   </div>
+      <nav class="navbar navbar-expand-lg${uiConfig.fixed_header ?' fixed-top': ''} ${uiConfig.header_style_class}">
+         <div class="container">
+         <a class="navbar-brand" href="/">${uiConfig.logo_image ? '<img border="0" alt="'+uiConfig.company_name+'" src="'+uiConfig.logo_link_name+'" height="'+uiConfig.height+'" width="'+uiConfig.logo_width+'">' : uiConfig.logo_link_name}</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/">${uiConfig.nav_link_1}</a>
+            </li>
+            <li class="nav-item dropdown">
+               <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="/">&gt; ${uiConfig.nav_link_1}</a></div>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="${uiConfig.contact_link}" target="_blank">${uiConfig.nav_link_4}</a>
+            </li>
+            ${uiConfig.show_logout_button ?'<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>': ''}
+           </ul>
+           <form class="d-flex" method="get" action="/0:search">
+            <input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search" value="" required="">
+            <button class="btn btn btn-danger" onclick="if($('#search_bar_form>input').val()) $('#search_bar_form').submit();" type="submit">Search</button>
+           </form>
+          </div>
+         </div>
+      </nav>
+     </div>
 </header>
 <div class="loading" id="spinner" style="display:none;">Loading&#8230;</div>
 <div>
